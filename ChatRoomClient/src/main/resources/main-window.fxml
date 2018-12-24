@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="rootPane" stylesheets="@dark-theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.Controller">
+   <children>
+      <AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@dark-theme.css">
+         <children>
+            <VBox fx:id="rootBox" layoutX="13.0" layoutY="14.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox fx:id="serverBox" spacing="10.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <JFXTextField fx:id="ipInput" prefHeight="34.0" prefWidth="290.0" promptText="输入服务器ip" HBox.hgrow="ALWAYS" />
+                        <JFXTextField fx:id="portInput" layoutX="10.0" layoutY="10.0" prefHeight="34.0" prefWidth="91.0" promptText="输入端口" />
+                        <JFXButton fx:id="serverLinkBtn" onAction="#link" prefHeight="36.0" prefWidth="85.0" text="连接" HBox.hgrow="ALWAYS" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <JFXTextArea fx:id="showArea" prefHeight="314.0" prefWidth="557.0" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXTextArea>
+                  <HBox fx:id="inputBox" spacing="10.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <JFXTextField fx:id="inputText" prefHeight="23.0" prefWidth="466.0" promptText="输入消息" HBox.hgrow="ALWAYS" />
+                        <JFXButton fx:id="inputBtn" onAction="#send" prefHeight="23.0" prefWidth="105.0" text="发送" HBox.hgrow="ALWAYS" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
